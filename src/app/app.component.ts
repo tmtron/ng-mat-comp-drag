@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {AppDialogComponent} from './app-dialog/app-dialog.component';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ng-mat-comp-drag';
+
+  constructor(private readonly dialog: MatDialog) {
+  }
+
+  openDialogComponent() {
+    this.dialog.open(AppDialogComponent).afterClosed();
+  }
 }
