@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "serve-dist": "npx http-server ./dist/ng-mat-comp-drag/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
